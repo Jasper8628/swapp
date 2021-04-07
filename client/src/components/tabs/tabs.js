@@ -1,16 +1,17 @@
 import React from 'react'
 import { tabs } from '../../constants/constants';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 
 function Tabs() {
   const dispatch = useDispatch();
-  dispatch({ type: 'TAB', payload: 'people' });
+  const tabName = useSelector(state => state.tab);
 
   return (
     <div className='tabs'>
       {tabs.map(tab => (
-        <button style={{ 'margin': '10px' }} key={tab} onClick={() => dispatch({ type: 'TAB', payload: tab })} > {tab} </button>
+        <button className={tab.toLowerCase() === tabName ? 'tab tabActive' : 'tab'} style={{ 'margin': '10px' }} key={tab}
+          onClick={() => dispatch({ type: 'TAB', payload: tab.toLowerCase() })} > {tab} </button>
       ))}
     </div>
   )

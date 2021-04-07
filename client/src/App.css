@@ -9,20 +9,36 @@ body{
   background: black;
 }
 table{
-  background: yellow;
+  /* background: yellow; */
+  color: white;
   width: 50vw;
   text-align:left;
-  border: solid black 1px;
+  border: solid white 1px;
   border-collapse:collapse;
+  padding: 20px;
 }
 td ,th{
-  border: solid black 1px;
+  border: solid white 1px;
+  height: 50px;
+  padding-left:  10px;
 }
 .buttonContainer{
-  margin-top: 50px;
+  margin: 20px;
   color: white;
 }
 .detailsContainer{
+  margin-top: 20px;
   color: white;
-  text-align: center;
+  text-align: left;
+  border:solid white 1px;
+  width: 50vw;
+  padding: 10px;
+}
+.detailsContainer h3{
+  padding-bottom: 5px;
+  border-bottom: solid white 2px;
+  width: 12%;
+}
+.tabActive{
+  font-weight: bolder;
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-
 function Pagination() {
   const dispatch = useDispatch();
   const pageCount = useSelector(state => state.pageCount);
@@ -14,7 +13,7 @@ function Pagination() {
       <span>Page {pageCount}/{pageNum} </span>
       <button
         onClick={() => dispatch({ type: 'PAGE', payload: 1 })}
-        disabled={pageCount + 1 >= pageNum ? true : false} >Page {pageCount + 1}</button>
+        disabled={pageCount + 1 > pageNum ? true : false} >Page {pageCount + 1}</button>
     </div>
   )
 }

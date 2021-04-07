@@ -4,7 +4,7 @@ import { PAGE_CHANGE, TAB_CHANGE, DETAILS_CHANGE } from "./types";
 const initialState = {
   pageCount: 1,
   pageNum: 5,
-  table: [1, 2, 3],
+  table: [''],
   details: {},
   tab: 'people',
 };

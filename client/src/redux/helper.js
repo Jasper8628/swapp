@@ -5,8 +5,8 @@ const formatData = (data, tabName) => {
       data.forEach(item => {
         newData.push({
           "Name": item.name,
-          "Height": item.height,
-          "Mass": item.mass,
+          "Height": item.height !== 'unknown' ? `${item.height} cm` : item.height,
+          "Mass": item.mass !== 'unknown' ? `${item.mass} kg` : item.mass,
           "Gender": item.gender,
           "Birth Year": item.birth_year,
           "Films": item.films
@@ -20,7 +20,7 @@ const formatData = (data, tabName) => {
           "Climate": item.climate,
           "Terrain": item.terrain,
           "Population": item.population,
-          "Diameter": item.diameter,
+          "Diameter": `${item.diameter} km`,
           "Films": item.films
         })
       })

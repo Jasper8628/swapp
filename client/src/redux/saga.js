@@ -38,6 +38,7 @@ function* detailChange({ payload }) {
   const query = [];
   const filmNames = [];
   const details = yield select(selectDetails);
+  // requires details.Films to be an array of film urls
   if (typeof (details.Films) === 'object') {
     // a more performant way is just to store all movie titles in an array
     // then retrieve them by the last digit of each film url

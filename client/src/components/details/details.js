@@ -6,6 +6,7 @@ function Details() {
   const keys = Object.keys(details);
   return (
     <div className='detailsContainer'>
+      <h3>Details Section</h3>
       {keys.map(key => (
         <p key={key} >{key}: {details[key]} </p>
       ))}

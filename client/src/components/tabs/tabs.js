@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { tabs } from '../../constants/constants';
 import { useDispatch } from 'react-redux';
 
 
 function Tabs() {
   const dispatch = useDispatch();
-  console.log('logging tabs')
   dispatch({ type: 'TAB', payload: 'people' });
 
   return (

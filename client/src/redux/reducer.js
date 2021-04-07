@@ -4,7 +4,7 @@ import { PAGE_CHANGE, TAB_CHANGE, DETAILS_CHANGE } from "./types";
 const initialState = {
   pageCount: 1,
   pageNum: 5,
-  table: [],
+  table: [1, 2, 3],
   details: {},
   tab: 'people',
 };
@@ -28,7 +28,7 @@ const reducer = (state = initialState, action) => {
     case DETAILS_CHANGE:
       return {
         ...state,
-        details: state.table[action.payload],
+        details: action.payload,
       };
     default:
       return state;

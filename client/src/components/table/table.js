@@ -5,22 +5,25 @@ function Table() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch({ type: 'TAB', payload: 'people' });
-    console.log('useEffect successful')
   }, []);
 
   const table = useSelector(state => state.table);
   const keys = Object.keys(table[0]).slice(0, 3);
   return (
-    <div>
+    <div className='tableContainer'>
       <table >
-        <tr>
-          {keys.map(key => (
-            <th key={key}>{key}</th>
+        <thead>
+          <tr>
+            {keys.map(key => (
+              <th key={key}>{key}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {table.map((item, index) => (
+            <TableRow key={index} data={item} index={index} />
           ))}
-        </tr>
-        {table.map((item, index) => (
-          <TableRow data={item} index={index} />
-        ))}
+        </tbody>
       </table>
     </div>
   )

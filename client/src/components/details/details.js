@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-function Details() {
-  const details = useSelector(state => state.details);
+function Details({ selectDetails }) {
+  const details = useSelector(selectDetails);
   const keys = Object.keys(details);
   return (
     <div className='detailsContainer'>

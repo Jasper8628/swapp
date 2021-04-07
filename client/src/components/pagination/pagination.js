@@ -1,18 +1,18 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-function Pagination() {
+function Pagination({ selectPageCount, selectPageNum, changePage }) {
   const dispatch = useDispatch();
-  const pageCount = useSelector(state => state.pageCount);
-  const pageNum = useSelector(state => state.pageNum);
+  const pageCount = useSelector(selectPageCount);
+  const pageNum = useSelector(selectPageNum);
   return (
     <div className='buttonContainer'>
       <button
-        onClick={() => dispatch({ type: 'PAGE', payload: -1 })}
+        onClick={() => dispatch(changePage(-1))}
         disabled={pageCount - 1 <= 0 ? true : false} >Page {pageCount - 1}</button>
       <span>Page {pageCount}/{pageNum} </span>
       <button
-        onClick={() => dispatch({ type: 'PAGE', payload: 1 })}
+        onClick={() => dispatch(changePage(1))}
         disabled={pageCount + 1 > pageNum ? true : false} >Page {pageCount + 1}</button>
     </div>
   )

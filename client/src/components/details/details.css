@@ -1,0 +1,15 @@
+
+.detailsContainer{
+  margin-top: 20px;
+  color: rgb(218, 218, 218);
+  text-align: left;
+  border:solid white 1px;
+  border-radius: 10px;
+  width: 50vw;
+  padding: 10px;
+}
+.detailsContainer h3{
+  padding-bottom: 5px;
+  border-bottom: solid rgb(212, 212, 212) 2px;
+  width: 12%;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import './details.css';
 
 function Details({ selectDetails }) {
   const details = useSelector(selectDetails);

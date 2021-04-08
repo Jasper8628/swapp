@@ -1,0 +1,27 @@
+
+.tableContainer{
+  height: 600px;
+}
+table{
+  /* background: yellow; */
+  color: rgb(214, 212, 212);
+  width: 50vw;
+  text-align:left;
+  border: solid white 1px;
+  border-collapse:collapse;
+  padding: 20px;
+}
+thead{
+  background: rgb(68, 68, 68);
+}
+tbody tr:hover{
+  background: rgb(20, 20, 20);
+}
+tbody tr:focus{
+  background: rgb(20, 20, 20);
+}
+td ,th{
+  border: solid white 1px;
+  height: 50px;
+  padding-left:  10px;
+}

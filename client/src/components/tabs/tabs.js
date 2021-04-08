@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import './tabs.css';
 
 function Tabs({ selectTab, tabs, changeTab }) {
   const dispatch = useDispatch();
@@ -10,9 +11,11 @@ function Tabs({ selectTab, tabs, changeTab }) {
   }, []);
 
   return (
-    <div className='tabs'>
+    <div data-testid='tabs' className='tabs'>
       {tabs.map(tab => (
         <button
+          data-testid='tabs-button'
+          key={tab}
           className={tab.toLowerCase() === tabName ? 'tab tabActive' : 'tab'}
           onClick={() => dispatch(changeTab(tab.toLowerCase()))}
         >

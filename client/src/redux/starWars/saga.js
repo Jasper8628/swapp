@@ -46,7 +46,7 @@ function* detailChange({ payload }) {
     if (typeof (details.Films) === 'object') {
       // a more performant way is just to store all movie titles in an array
       // then retrieve them by the last digit of each film url
-      yield details.Films.forEach(film => query.push(axios.get(film)));
+      yield details.Films.forEach(film => query.push(axios.get(film.replace('http', 'https'))));
       const response = yield all(query);
       yield response.forEach(item => filmNames.push(item.data.title));
       details.Films = yield filmNames.join(' , ');

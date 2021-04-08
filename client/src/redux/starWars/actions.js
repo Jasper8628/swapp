@@ -17,4 +17,7 @@ export const sagaChangeTab = (payload) => {
 };
 export const sagaChangeDetails = (payload) => {
   return { type: types.DETAILS_CHANGE, payload: payload }
-}
+};
+export const sagaError = (payload) => {
+  return { type: types.ERROR, payload: payload }
+};

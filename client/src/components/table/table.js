@@ -1,14 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import TableRow from '../tableRow/tableRow';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 function Table({ selectTable, tableSize, changeDetails }) {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch({ type: 'TAB', payload: 'people' });
-  }, []);
-
   const table = useSelector(selectTable);
   const keys = Object.keys(table[0]).slice(0, tableSize);
   return (

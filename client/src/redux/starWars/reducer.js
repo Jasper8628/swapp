@@ -1,5 +1,5 @@
 
-import { PAGE_CHANGE, TAB_CHANGE, DETAILS_CHANGE } from "./types";
+import { PAGE_CHANGE, TAB_CHANGE, DETAILS_CHANGE, ERROR } from "./types";
 
 const initialState = {
   pageCount: 1,
@@ -7,6 +7,7 @@ const initialState = {
   table: [''],
   details: {},
   tab: 'people',
+  errorMessage: '',
 };
 
 const reducer = (state = initialState, action) => {
@@ -29,6 +30,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         details: action.payload,
+      };
+    case ERROR:
+      return {
+        ...state,
+        errorMessage: action.payload,
       };
     default:
       return state;

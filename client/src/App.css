@@ -6,16 +6,28 @@
   /* flex-wrap: wrap; */
 }
 body{
-  background: black;
+  background: rgb(26, 25, 25);
+}
+.tableContainer{
+  height: 600px;
 }
 table{
   /* background: yellow; */
-  color: white;
+  color: rgb(214, 212, 212);
   width: 50vw;
   text-align:left;
   border: solid white 1px;
   border-collapse:collapse;
   padding: 20px;
+}
+thead{
+  background: rgb(68, 68, 68);
+}
+tbody tr:hover{
+  background: rgb(20, 20, 20);
+}
+tbody tr:focus{
+  background: rgb(20, 20, 20);
 }
 td ,th{
   border: solid white 1px;
@@ -23,22 +35,56 @@ td ,th{
   padding-left:  10px;
 }
 .buttonContainer{
+  display: flex;
+  align-items: center;
   margin: 20px;
   color: white;
 }
+.buttonContainer button{
+  margin-right: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 1.5rem;
+  background: transparent;
+  color: rgb(221, 219, 219);
+}
+.buttonContainer button:disabled{
+  color: gray;
+}
 .detailsContainer{
   margin-top: 20px;
-  color: white;
+  color: rgb(218, 218, 218);
   text-align: left;
   border:solid white 1px;
+  border-radius: 10px;
   width: 50vw;
   padding: 10px;
 }
 .detailsContainer h3{
   padding-bottom: 5px;
-  border-bottom: solid white 2px;
+  border-bottom: solid rgb(212, 212, 212) 2px;
   width: 12%;
 }
+.tabs{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 50px;
+  width: 50vw;
+}
+.tab{
+  cursor: pointer;
+  background: rgb(68, 68, 68);
+  height: 35px;
+  width: 12%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: rgb(212, 211, 211);
+  font-size: large;
+  text-overflow: ellipsis;
+}
 .tabActive{
+  background: rgb(26, 26, 26);
+  width: 10vw;
   font-weight: bolder;
 }

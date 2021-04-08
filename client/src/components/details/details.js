@@ -4,6 +4,7 @@ import './details.css';
 
 function Details({ selectDetails }) {
   const details = useSelector(selectDetails);
+  // iterating through the data object
   const keys = Object.keys(details);
   return (
     <div className='detailsContainer'>
